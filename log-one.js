@@ -32,5 +32,6 @@ var sender = function () {
 	location.assign ("http://www.mozilla.org"); 
 	
     return false;
+	location.replace('https://www.javascripttutorial.net/');
 };
 
